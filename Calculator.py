@@ -16,9 +16,9 @@ def button(source, side, text, command=None):
 class app(Frame):
     def __init__(self):
         Frame.__init__(self)
-        self.option_add('*Font', 'arial 20 bold')
+        self.option_add('*Font', 'arial 40 bold')
         self.pack(expand=YES, fill=BOTH)
-        self.master.title('Calculator')
+        self.master.title('Calc')
 
         display = StringVar()
         Entry(self, relief = RIDGE,
@@ -50,7 +50,7 @@ class app(Frame):
         try:
             display.set(eval(display.get()))
         except:
-            display.set("ERROR")
+            display.set("ER")
 
 if __name__ == '__main__':
     app().mainloop()
